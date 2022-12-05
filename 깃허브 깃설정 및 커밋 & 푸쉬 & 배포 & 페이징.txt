@@ -1,0 +1,78 @@
+깃허브 깃설정 및 커밋 & 푸쉬 & 배포 & 페이징
+Jkl3435@naver.com
+gmrsnsk4406!
+
+- 깃허브 사이트
+1. 웹 브라우저 열기 - 깃허브 로그인
+2. 리파지토리 생성
+
+- 로컬 프로젝트 작업위치
+3. 경로확인  ls -la
+목록보기 숨김파일까지 모두 보여지기
+gimsubin-ui-MacBookPro:1205_JUST_SHOP_깃허브_배포 kimsubin$ ls -la
+total 2392
+drwxr-xr-x   11 kimsubin  staff      352 12  5 10:10 .
+drwxr-xr-x   10 kimsubin  staff      320 12  5 09:52 ..
+-rw-r--r--@   1 kimsubin  staff     6148 12  5 09:59 .DS_Store
+-rw-r--r--    1 kimsubin  staff      310 12  5 09:59 .gitignore
+-rw-r--r--    1 kimsubin  staff     3359 11 28 13:03 README.md
+drwxr-xr-x  820 kimsubin  staff    26240 12  5 10:04 node_modules
+-rw-r--r--    1 kimsubin  staff  1198838 12  5 10:04 package-lock.json
+-rw-r--r--    1 kimsubin  staff      812 11 28 13:03 package.json
+drwxr-xr-x    7 kimsubin  staff      224 12  5 10:10 public
+drwxr-xr-x    4 kimsubin  staff      128 12  5 10:03 src
+-rw-r--r--    1 kimsubin  staff      247 12  5 10:18 깃허브 깃설정 및 커밋 & 푸쉬 & 배포 & 페이징.txt
+
+4. 깃설정
+$ git init
+Initialized empty Git repository in /Users/kimsubin/Documents/프엔3기_김수빈/프엔3기_강의산출물/12월_프로젝트산출물/1205_JUST_SHOP_깃허브_배포/.git/
+
+5. 깃설정 목록 확인
+ls -la
+gimsubin-ui-MacBookPro:1205_JUST_SHOP_깃허브_배포 kimsubin$ ls -la
+total 2392
+drwxr-xr-x   12 kimsubin  staff      384 12  5 10:20 .
+drwxr-xr-x   10 kimsubin  staff      320 12  5 09:52 ..
+-rw-r--r--@   1 kimsubin  staff     6148 12  5 09:59 .DS_Store
+drwxr-xr-x    9 kimsubin  staff      288 12  5 10:20 .git
+-rw-r--r--    1 kimsubin  staff      310 12  5 09:59 .gitignore
+-rw-r--r--    1 kimsubin  staff     3359 11 28 13:03 README.md
+drwxr-xr-x  820 kimsubin  staff    26240 12  5 10:04 node_modules
+-rw-r--r--    1 kimsubin  staff  1198838 12  5 10:04 package-lock.json
+-rw-r--r--    1 kimsubin  staff      812 11 28 13:03 package.json
+drwxr-xr-x    7 kimsubin  staff      224 12  5 10:10 public
+drwxr-xr-x    4 kimsubin  staff      128 12  5 10:03 src
+-rw-r--r--    1 kimsubin  staff     1473 12  5 10:22 깃허브 깃설정 및 커밋 & 푸쉬 & 배포 & 페이징.txt
+
+///////////////////////////////////////////////////////////
+6. 깃 환경설정 git config
+사용자 이름
+사용자 이메일
+
+git config user.name 'kimsuubin'
+git config user.email 'jkl3435@naver.com'
+
+화면청소 : clear
+
+7. name  확인 명령어 : git config user.name 
+   email 확인 명령어 : git config user.email
+
+///////////////////////////////////////////////////////////
+
+8. 깃허브 원격지(remote) 리파지토리(저장소) 주소(깃주소) 추가(add)지정 origin(url)
+git remote add origin https://github.com/kimsuubin/just_shop.git
+
+9. 원격지 리파지토리 주소 확인
+git remote -v
+origin  https://github.com/kimsuubin/just_shop.git (fetch)
+origin  https://github.com/kimsuubin/just_shop.git (push)
+
+만약에 잘못된 주소라면 삭제하기 git remote remove origin
+그 후 확인하기 git remote -v
+
+/////////////////////////////////////////////////////////////////////
+
+10. 스테이징 하기
+
+모든파일(.명령) 스테이징
+git add .
