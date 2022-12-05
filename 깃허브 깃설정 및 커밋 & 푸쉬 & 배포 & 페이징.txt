@@ -88,7 +88,14 @@ git commit -m '리액트 create-react-app 저스트 쇼핑몰'
 12. 푸쉬(업로드) 하기
 git push origin master
 
+(master 브랜치가 없어서 발생한 오류 
+   git checkout -b 'master'  (새로운 마스터 생성)
+   git push origin master
 
+
+   gimsubin-ui-MacBookPro:1205_JUST_SHOP_깃허브_배포 kimsubin$ git checkout -b 'master'
+   Switched to a new branch 'master'
+)
 ////////////////////////////////////////////////////////////////////
 
 웹페이지 / 파일 수정
@@ -97,3 +104,73 @@ git push origin master
 git add .
 git commit -m '리액트 create-react-app 저스트 쇼핑몰 수정 jsx'
 git push origin master
+
+
+gimsubin-ui-MacBookPro:1205_JUST_SHOP_깃허브_배포 kimsubin$ git push origin master
+Enumerating objects: 56, done.
+Counting objects: 100% (56/56), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (56/56), done.
+Writing objects: 100% (56/56), 1.35 MiB | 2.56 MiB/s, done.
+Total 56 (delta 7), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (7/7), done.
+To https://github.com/kimsuubin/just_shop.git
+ * [new branch]      master -> master
+
+/////////////////////////////////////////////////////////////
+
+배포하기(페이징)
+1. 상단메뉴 Settings 클릭
+2. 좌측메뉴 중간하단 Pages 클릭
+3. 우측 GitHub Pages
+4. Branch
+   GitHub Pages is currently disabled. Select a source below to enable GitHub Pages for this repository. Learn more.
+   NONE(클릭) / Save
+   master(선택클릭) / root / Save
+   그리고 Save 클릭 -> GitHub Pages source saved. 알림 뜬다.
+
+5. 새로고침한다. command + shift + R
+
+   Your site is live at https://kimsuubin.github.io/just_shop/
+   30초 ~ 1분 대기 후 접속
+
+6. Deployment 도움사이트
+   => 
+   중간 아래 위치
+   GitHub Pages 로 스크롤한다.
+
+ - Step 1: Add homepage to package.json  
+   // package.json => 깃허브 배포주소 속성과 주소 추가 
+   포트폴리오 프로젝트 
+   package.json 에디터에서 열기
+
+   가장 아래 쪽에 추가한다.
+   "homepage": "http://kimsuubin.github.io/just_shop"
+
+ - Step 2: Install gh-pages and add deploy to scripts in package.json 
+   // gh-pages => npm i(install) gh-pages 설치
+      npm install --save gh-pages
+
+   package.json scripts에 배포 추가
+   "predeploy": "npm run build",
+   "deploy": "gh-pages -b master -d build",
+
+ - Step 3: Deploy the site by running npm run deploy
+   // npm run deploy 
+   
+7. 빌드하기 npm run build
+
+
+
+원본소스만 올리기
+기본주소 삭제하기 git remote remove origin
+그 후 확인하기 git remote -v
+
+git remote add origin https://github.com/kimsuubin/just_shop_cra.git
+
+주소확인 : git remote -v
+
+올리기 
+git add .
+git commit -m '저스트 쇼핑몰 CRA 원본 소스'
+dit push origin master
