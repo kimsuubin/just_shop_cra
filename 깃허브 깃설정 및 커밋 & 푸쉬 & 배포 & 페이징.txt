@@ -155,10 +155,15 @@ To https://github.com/kimsuubin/just_shop.git
    "predeploy": "npm run build",
    "deploy": "gh-pages -b master -d build",
 
+7. 빌드하기 npm run build (=> 생략가능)
+
  - Step 3: Deploy the site by running npm run deploy
    // npm run deploy 
+
+8. 1분정도 후 웹 브라우저에 
+   배포주소(http://kimsuubin.github.io/just_shop) 링크열기.
    
-7. 빌드하기 npm run build
+
 
 
 
@@ -173,4 +178,7 @@ git remote add origin https://github.com/kimsuubin/just_shop_cra.git
 올리기 
 git add .
 git commit -m '저스트 쇼핑몰 CRA 원본 소스'
-dit push origin master
+git push origin master
+
+새로고침 소스 원본확인 끝
+버전관리 프로젝트 개발
