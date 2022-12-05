@@ -54,7 +54,7 @@ git config user.email 'jkl3435@naver.com'
 
 화면청소 : clear
 
-7. name  확인 명령어 : git config user.name 
+7. name  확인 명령어 : git config user.name
    email 확인 명령어 : git config user.email
 
 ///////////////////////////////////////////////////////////
